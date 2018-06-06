@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rTU-k9-5md">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--登入-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="登入" id="BYZ-38-t0r" customClass="ViewController" customModule="ios1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="登入" id="lqo-Nc-6oe">
+                        <barButtonItem key="rightBarButtonItem" title="登出" id="sLS-2Z-Nwt">
+                            <connections>
+                                <action selector="sighOut:" destination="BYZ-38-t0r" id="8U2-XC-HXq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="kPn-Ym-uel" kind="presentation" identifier="goSignIn" id="RU3-53-NH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Google登入-->
+        <scene sceneID="DgL-w3-VNi">
+            <objects>
+                <viewController title="Google登入" id="yC9-f4-Vsg" customClass="GoogleSignInViewController" customModule="ios1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hgl-wc-9IY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2e-HL-M1b" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="84" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.53610496916874395" green="0.74755154939163893" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QPp-yq-9qe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h2e-HL-M1b" firstAttribute="top" secondItem="CHd-Gs-K6E" secondAttribute="top" constant="20" id="7hF-QZ-Bdb"/>
+                            <constraint firstItem="CHd-Gs-K6E" firstAttribute="trailing" secondItem="h2e-HL-M1b" secondAttribute="trailing" constant="20" id="BTj-tj-acr"/>
+                            <constraint firstItem="h2e-HL-M1b" firstAttribute="leading" secondItem="CHd-Gs-K6E" secondAttribute="leading" constant="20" id="avZ-bv-S3u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CHd-Gs-K6E"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google Sign In" id="Mvj-Lf-q4N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ilQ-Qe-VUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2471.1999999999998" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3ZA-K0-YlN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rTU-k9-5md" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qDe-Sg-zv2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tIc-N2-SjE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lp7-63-qQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8hY-0V-XTQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kPn-Ym-uel" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3aq-uW-dsN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yC9-f4-Vsg" kind="relationship" relationship="rootViewController" id="Qyv-kR-dQC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pu9-c4-ZC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582" y="134"/>
+        </scene>
+    </scenes>
+</document>
